@@ -57,7 +57,7 @@ bool PhilipsLights::ChangeLightState(int lightNum, int bri, int hue, bool onOff,
 
     std::string URL = stringStream.str();
     URL = URL + tempPayloadMsg;
-    std::cout << "URL: \n" << URL << "\r\n\r\n";
+    //std::cout << "URL: \n" << URL << "\r\n\r\n";
     if(!PhilipsDevice::SendPOSTMethod(URL, jresp))
     {
         return false;
