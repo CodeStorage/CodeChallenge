@@ -45,13 +45,13 @@ bool PhilipsDevice::SendGETMethod(std::string URL, nlohmann::json &jresp)
     return true;
 }
 
-bool PhilipsDevice::SendPOSTMethod(std::string URL, nlohmann::json &jresp)
+bool PhilipsDevice::SendPUTMethod(std::string URL, nlohmann::json &jresp)
 {
     nlohmann::json tempJresp;
     PhilipsDevice::SendMessage(URL, tempJresp);
     if(tempJresp.empty())
     {
-        std::cerr << "POST Request Failed" << std::endl;
+        std::cerr << "PUT Request Failed" << std::endl;
         return false;
     }
     

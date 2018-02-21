@@ -8,7 +8,7 @@ public:
     ~PhilipsDevice();
     bool Initialize();
     bool SendGETMethod(std::string URL, nlohmann::json &jresp);
-    bool SendPOSTMethod(std::string URL, nlohmann::json &jresp);
+    bool SendPUTMethod(std::string URL, nlohmann::json &jresp);
     bool SendMessage(std::string msg, nlohmann::json &jsonResult);
 
 private:  
